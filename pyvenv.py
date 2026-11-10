@@ -20,6 +20,10 @@ def create_bash(venv_name):
         f"source ~/{venv_name}/bin/activate",
         "venv/activate_venv.bash"
     )
+    
+    write_file(
+        f"rm -r ~/{venv_name}",
+        "venv/delete_venv.bash")
 
 def write_file(text, file):
     with open(file, "w") as f:
